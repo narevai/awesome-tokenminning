@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/awesome-token-mining-banner.png" alt="Awesome Token Mining — mine more value from every AI token" width="900">
+  <img src="assets/awesome-token-mining-banner.png" alt="Awesome Token Mining" width="500">
 </p>
 
 # Awesome Token Mining [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
