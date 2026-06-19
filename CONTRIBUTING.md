@@ -15,6 +15,9 @@ Add projects that help people:
 ## What does not belong here
 
 - General AI news or hype with no clear cost-saving angle
+- Chat UIs, local runners, or agent apps whose only hook is "self-hosted" — if Ollama, llama.cpp, or LocalAI already cover the cost story, skip the wrapper
+- Broad LLM platforms (tracing, evals, prompt management) where cost tracking is a side feature, not the product
+- Generic RAG, agent, or evaluation frameworks without a direct token-reduction or cost-measurement story
 - Abandoned projects with no commits in 12+ months (unless historically significant)
 - Pure model repos with no inference or cost story (link to model hubs instead)
 - Affiliate links or paid placement
