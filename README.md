@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/awesome-token-mining-banner.png" alt="Awesome Token Mining — mine more value from every AI token" width="900">
+</p>
+
 # Awesome Token Mining [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > Curated projects, tools, and techniques for **mining more value from every AI token** — self-hosting, compression, caching, routing, and observability.
