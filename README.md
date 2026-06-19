@@ -84,6 +84,7 @@ Shrink prompts and outputs before they hit the bill. These tools target the toke
 - [LLMLingua](https://github.com/microsoft/LLMLingua) - Microsoft Research prompt compressor. Up to 20× compression on long contexts with ~1.5% accuracy loss on benchmarks.
 - [LongLLMLingua](https://github.com/microsoft/LLMLingua) - Long-context variant that mitigates "lost in the middle" while compressing RAG prompts to a fraction of their size.
 - [LLMLingua-2](https://github.com/microsoft/LLMLingua) - Faster, task-agnostic prompt compression using a distilled model for near-real-time use.
+- [Ponytail](https://github.com/DietrichGebert/ponytail) - Agent skill that stops over-engineering via a YAGNI ladder: stdlib, native platform, and one-liners before custom code. Agentic benchmark: ~54% less code, ~22% fewer tokens, ~20% lower cost on real Claude Code sessions.
 - [TokenForge](https://github.com/Manavarya09/tokenforge) - Full-stack Rust optimizer for code, CLI output, conversation history, JSON, and MCP schemas. AST-aware folding with lossless SQLite-backed reversibility.
 - [Tokenless](https://github.com/TokenFleet-AI/tokenless) - Rust toolkit for schema compression, differential responses, TOON encoding, and command-output rewriting. Targets 60–90% savings on agent tool-call loops.
 
