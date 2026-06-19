@@ -1,28 +1,36 @@
 <p align="center">
-  <img src="assets/awesome-token-mining-banner.png" alt="Awesome Token Mining" width="500">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png">
+    <img src="assets/logo.png" width="220" alt="Token mining elephant">
+  </picture>
 </p>
 
-# Awesome Token Mining [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<h1 align="center">Awesome Token Mining</h1>
 
-> Curated projects, tools, and techniques for **mining more value from every AI token** — self-hosting, compression, caching, routing, and observability.
+<p align="center">
+  <em>The same work. Fewer tokens. Lower bill.</em>
+</p>
 
-The goal is simple: do the same work with fewer tokens, cheaper models, or your own hardware. This list collects the best open-source and practical resources for cutting LLM bills without cutting capability.
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <img src="https://img.shields.io/github/stars/narevai/awesome-tokenminning?style=flat-square&color=111111&label=stars" alt="Stars">
+  <img src="https://img.shields.io/badge/categories-10-111111?style=flat-square" alt="10 categories">
+  <img src="https://img.shields.io/badge/tools-70%2B-111111?style=flat-square" alt="70+ tools">
+  <img src="https://img.shields.io/badge/license-CC0-111111?style=flat-square" alt="CC0 license">
+</p>
 
-## Contents
-
-- [Self-Hosting](#self-hosting)
-- [vLLM & High-Throughput Inference](#vllm--high-throughput-inference)
-- [Quantization](#quantization)
-- [KV Cache & Speculative Decoding](#kv-cache--speculative-decoding)
-- [Token Compression](#token-compression)
-- [Semantic & Response Caching](#semantic--response-caching)
-- [Gateways & Model Routing](#gateways--model-routing)
-- [Observability & Cost Tracking](#observability--cost-tracking)
-- [Context & Prompt Optimization](#context--prompt-optimization)
-- [Related Lists](#related-lists)
-- [Contributing](#contributing)
+<p align="center">
+  <strong>60–90% self-host savings &middot; 20&times; prompt compression &middot; 10&times; cache hits &middot; 85% smarter routing</strong><br>
+  <sub>Curated open-source projects for cutting LLM bills without cutting capability — self-hosting, quantization, KV cache tricks, token compression, semantic caching, model routing, and cost observability. Every entry earns its place by concretely reducing token spend, inference cost, or API bills. <a href="#contributing">Contribute</a> &middot; <a href="CONTRIBUTING.md">guidelines</a>.</sub>
+</p>
 
 ---
+
+You know the bill. Tokens in, dollars out. You spin up another agent, another RAG pipeline, another 200K context window — and somewhere a GPU farm charges you rent.
+
+The fix is not one trick. It is a stack: host your own weights, quantize them, compress the prompts, cache what repeats, route easy work to cheap models, and measure every cent before it compounds.
+
+This list is the map.
 
 ## Self-Hosting
 
@@ -135,7 +143,7 @@ Engineering patterns and libraries that reduce context bloat without adding new 
 
 ## Contributing
 
-Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
+Contributions welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
 
 **Quick rules:**
 
@@ -146,6 +154,4 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before ope
 
 ## License
 
-[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, contributors waive all copyright and related rights to this list.
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/). To the extent possible under law, contributors waive all copyright and related rights to this list.
