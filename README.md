@@ -15,7 +15,7 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <img src="https://img.shields.io/github/stars/narevai/awesome-tokenminning?style=flat-square&color=111111&label=stars" alt="Stars">
   <img src="https://img.shields.io/badge/categories-10-111111?style=flat-square" alt="10 categories">
-  <img src="https://img.shields.io/badge/tools-70%2B-111111?style=flat-square" alt="70+ tools">
+  <img src="https://img.shields.io/badge/tools-50%2B-111111?style=flat-square" alt="50+ tools">
   <img src="https://img.shields.io/badge/license-CC0-111111?style=flat-square" alt="CC0 license">
 </p>
 
@@ -37,14 +37,11 @@ This list is the map.
 Run models on your own hardware or rented GPUs. At scale, self-hosting often beats per-token API pricing by 60–90%.
 
 - [Exo](https://github.com/exo-explore/exo) - Clusters laptops and desktops into a distributed inference mesh. Splits models across devices so you can run 70B+ locally instead of paying per-token APIs.
-- [Jan](https://github.com/janhq/jan) - Desktop app for running models locally with an offline-first workflow.
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) - Efficient C/C++ inference for LLaMA-family models. The foundation many local runners build on; excellent for CPU and quantized models.
 - [llamafile](https://github.com/mozilla-ai/llamafile) - Single-file executable models built on llama.cpp. Ship weights + runtime together with zero install — ideal for offline, zero-API-cost deployments.
 - [LocalAI](https://github.com/mudler/LocalAI) - OpenAI-compatible API server that runs on CPU, GPU, or Apple Silicon. Broad model and backend support without cloud lock-in.
 - [Ollama](https://github.com/ollama/ollama) - One-command local model runner. Best for prototyping, single-user workflows, and edge deployments on consumer hardware.
-- [Open WebUI](https://github.com/open-webui/open-webui) - Self-hosted ChatGPT-style interface that talks to Ollama, OpenAI, and other backends from a single UI.
 - [Tabby](https://github.com/TabbyML/tabby) - Self-hosted AI coding assistant. Replace Copilot-style subscriptions with a model you control.
-- [text-generation-webui](https://github.com/oobabooga/text-generation-webui) - Gradio UI for running and experimenting with local models. Great for evaluating models before committing to production serving.
 
 ## vLLM & High-Throughput Inference
 
@@ -117,11 +114,8 @@ You can't optimize what you can't measure. These tools attribute token spend to 
 
 - [CostPilot](https://github.com/aryanjp1/costpilot) - Self-hosted LLM cost dashboard with a 3-line Python SDK. Tracks spend, tokens, and latency per model/feature with forecasting and savings recommendations.
 - [Helicone](https://github.com/Helicone/helicone) - LLM observability proxy that logs every request with latency, cost, and cache hit metrics.
-- [Langfuse](https://github.com/langfuse/langfuse) - Open-source LLM engineering platform with tracing, prompt management, and cost analytics per request.
 - [llmwatch](https://github.com/DanMeon/llmwatch) - Lightweight SDK instrumentation for OpenAI, Anthropic, Google, and more. Tags costs by feature/user with bundled pricing for 1000+ models — no proxy required.
-- [Lunary](https://github.com/lunary-ai/lunary) - LLM product analytics with cost tracking, prompt versioning, and user-level attribution.
 - [Narev](https://github.com/narev-ai/narev) - AI billing and cost attribution SDK. Pin live pricing, calculate per-request COGS, and wire usage-based billing.
-- [OpenLIT](https://github.com/openlit/openlit) - OpenTelemetry-native observability for LLM apps with token and cost dashboards.
 - [Shekel](https://github.com/arieradle/shekel) - Budget enforcement and cost tracking for agentic systems. One-line Python integration with OpenTelemetry metrics, circuit breakers, and per-tool spend limits.
 
 ## Context & Prompt Optimization
@@ -129,11 +123,8 @@ You can't optimize what you can't measure. These tools attribute token spend to 
 Engineering patterns and libraries that reduce context bloat without adding new infrastructure.
 
 - [Anthropic Prompt Caching Docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) - Official guide to `cache_control` breakpoints for up to 90% off repeated input prefixes.
-- [Cursor Rules / AGENTS.md patterns](https://github.com/PatrickJS/awesome-cursorrules) - Keep agent context files lean. Smaller system prompts mean smaller bills on every turn.
 - [DSPy](https://github.com/stanfordnlp/dspy) - Declarative prompt optimization from Stanford NLP. Optimizers like MIPROv2 and BootstrapFewShot prune redundant instructions and pick efficient few-shot examples from your data.
-- [LlamaIndex Response Synthesizers](https://docs.llamaindex.ai/en/stable/module_guides/querying/response_synthesizers/) - Configurable summarization and refinement modes that trade context size for answer quality.
 - [Mem0](https://github.com/mem0ai/mem0) - Long-term memory layer for agents. Stores and retrieves only relevant facts instead of replaying full chat history — cuts recurring context tokens on every turn.
-- [RAGAS](https://github.com/explodinggradients/ragas) - Evaluate RAG pipelines to find when you're over-retrieving context and paying for irrelevant chunks.
 - [tiktoken](https://github.com/openai/tiktoken) - Fast BPE tokenizer. Count tokens before you send them and catch bloated prompts at build time.
 
 ## Related Lists
