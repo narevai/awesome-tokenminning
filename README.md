@@ -15,7 +15,7 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <img src="https://img.shields.io/github/stars/narevai/awesome-tokenminning?style=flat-square&color=111111&label=stars" alt="Stars">
   <img src="https://img.shields.io/badge/categories-10-111111?style=flat-square" alt="10 categories">
-  <img src="https://img.shields.io/badge/tools-50%2B-111111?style=flat-square" alt="50+ tools">
+  <img src="https://img.shields.io/badge/tools-55%2B-111111?style=flat-square" alt="55+ tools">
   <img src="https://img.shields.io/badge/license-CC0-111111?style=flat-square" alt="CC0 license">
 </p>
 
@@ -68,6 +68,8 @@ Attack the two biggest inference bottlenecks: KV cache memory on long contexts, 
 
 - [EAGLE](https://github.com/SafeAILab/EAGLE) - Speculative decoding via feature extrapolation. A small draft head proposes multiple tokens; the main model verifies in parallel for ~2–3× faster generation with provably identical output distribution.
 - [kvpress](https://github.com/NVIDIA/kvpress) - NVIDIA's unified library of KV cache compression methods (SnapKV, H2O, Finch, and more). Drop-in Hugging Face pipeline for long-context workloads where cache size dominates memory.
+- [LMCache](https://github.com/LMCache/LMCache) - Distributed KV cache layer for vLLM and SGLang. Shares prefix KV across instances and tiers so repeated long contexts skip full prefill — lower TTFT and more throughput per GPU.
+- [Mooncake](https://github.com/kvcache-ai/Mooncake) - KVCache-centric disaggregated serving platform (powers Kimi). Pools and transfers KV across prefill/decode nodes via RDMA — up to 75% more requests at the same SLO on production workloads.
 - [Medusa](https://github.com/FasterDecoding/Medusa) - Adds lightweight prediction heads to a frozen base model to speculate multiple tokens per step. No separate draft model required.
 - [SnapKV](https://github.com/FasterDecoding/SnapKV) - Fine-tuning-free KV cache compression. Observes attention patterns in a prompt window, keeps only clustered important positions per head — up to 8× memory savings on 16K+ contexts.
 
@@ -89,16 +91,19 @@ Shrink prompts and outputs before they hit the bill. These tools target the toke
 
 Skip the LLM entirely when a similar question was already answered, or reuse provider-side prefix caches.
 
+- [FerroCache](https://github.com/nickleodoen/ferrocache) - Standalone Rust semantic cache service with fleet-wide sharing, MCP support, and drop-in OpenAI/Anthropic SDK wrappers. Survives app restarts — skip redundant LLM calls across your whole stack.
 - [GPTCache](https://github.com/zilliztech/GPTCache) - Semantic cache for LLM apps. Vector similarity matching returns cached responses for equivalent queries — up to 10× cost reduction on hit.
 - [LiteLLM](https://github.com/BerriAI/litellm) - Universal LLM gateway with in-memory, Redis, S3, and semantic caching backends. One integration for caching across providers.
-- [RedisVL](https://github.com/redis/redis-vl) - Redis vector library for building semantic caches with sub-millisecond lookups at scale.
 - [ModelCache](https://github.com/shibing624/ModelCache) - Multi-level semantic cache with embedding similarity and TTL management for production LLM apps.
 - [OpenAI Prompt Caching Cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/Prompt_Caching_201.ipynb) - Practical guide to structuring prompts for up to 90% off cached input tokens on OpenAI models.
+- [RedisVL](https://github.com/redis/redis-vl) - Redis vector library for building semantic caches with sub-millisecond lookups at scale.
+- [semcache](https://github.com/sensoris/semcache) - Rust HTTP proxy semantic cache for OpenAI, Anthropic, and Gemini. Drop-in caching with Prometheus metrics and a built-in dashboard — no app code changes required.
 
 ## Gateways & Model Routing
 
 Route easy tasks to cheap models and hard tasks to capable ones. Enforce budgets before spend happens.
 
+- [Bifrost](https://github.com/maximhq/bifrost) - High-performance AI gateway with semantic caching, budget limits, and automatic failover across 23+ providers. OpenAI-compatible drop-in with sub-15µs routing overhead.
 - [Conduit](https://github.com/ashita-ai/conduit) - ML-powered router using Thompson Sampling bandits. Learns which model handles each query type best, balancing cost, quality, and latency from live traffic.
 - [LiteLLM Proxy](https://github.com/BerriAI/litellm) - Production proxy with budget limits, rate limiting, load balancing, and fallback chains across 100+ models.
 - [LLMRouter](https://github.com/ulab-uiuc/llmrouter) - Research-grade routing library with 16+ strategies (KNN, MLP, Elo, graph-based, BERT routers). Unified CLI for training cost-aware routers on benchmark data.
@@ -107,6 +112,7 @@ Route easy tasks to cheap models and hard tasks to capable ones. Enforce budgets
 - [ParetoBandit](https://github.com/ParetoBandit/ParetoBandit) - Cost-aware contextual bandit router with online budget pacing. Adapts when model prices or quality shift — routing decisions in microseconds on CPU.
 - [Portkey](https://github.com/Portkey-AI/gateway) - AI gateway with caching, retries, load balancing, and observability hooks for multi-provider setups.
 - [RouteLLM](https://github.com/lm-sys/RouteLLM) - ML-based router that sends queries to strong or weak models based on difficulty. Up to 85% cost reduction with minimal quality loss.
+- [UncommonRoute](https://github.com/CommonstackAI/UncommonRoute) - Local OpenAI-compatible proxy that routes each agent step independently. Held-out SWE-bench: matched task quality at 53% lower API cost vs frontier-only.
 
 ## Observability & Cost Tracking
 
@@ -135,7 +141,7 @@ Engineering patterns and libraries that reduce context bloat without adding new 
 
 ## Contributing
 
-Contributions welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
+Contributions welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR. See [CHANGELOG.md](CHANGELOG.md) for recent updates.
 
 **Quick rules:**
 

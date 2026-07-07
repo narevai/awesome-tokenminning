@@ -1,0 +1,73 @@
+name: Add a project
+description: Suggest a tool for the awesome list
+title: "Add [Project Name]"
+labels: ["addition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping curate Awesome Token Mining! Please read [CONTRIBUTING.md](../CONTRIBUTING.md) before submitting.
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project name
+      placeholder: e.g. LMCache
+    validations:
+      required: true
+
+  - type: input
+    id: project-url
+    attributes:
+      label: Canonical URL
+      description: GitHub repo or official docs
+      placeholder: https://github.com/org/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested category
+      options:
+        - Self-Hosting
+        - vLLM & High-Throughput Inference
+        - Quantization
+        - KV Cache & Speculative Decoding
+        - Token Compression
+        - Semantic & Response Caching
+        - Gateways & Model Routing
+        - Observability & Cost Tracking
+        - Context & Prompt Optimization
+        - New category (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: One-line description
+      description: What it does and how it saves tokens or money
+      placeholder: "[Project] - Does X, saving Y% on Z workloads."
+    validations:
+      required: true
+
+  - type: textarea
+    id: cost-angle
+    attributes:
+      label: Cost-saving angle
+      description: How does this concretely reduce token spend, inference cost, or API bills?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: The project is open source or has a meaningful free tier
+          required: true
+        - label: The project has had commits in the last 12 months
+          required: true
+        - label: I searched the README and this is not a duplicate
+          required: true
