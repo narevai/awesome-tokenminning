@@ -33,7 +33,7 @@ Add projects that help people:
    ```
 
 4. Keep descriptions factual. Cite measurable claims when you can (e.g. "up to 20× compression" from the project's own benchmarks).
-5. Open a PR with a clear title like `Add LiteLLM to Gateways section`.
+5. Open a PR with a clear title like `Add LiteLLM to Gateways section`, or file an [issue using the add-project template](.github/ISSUE_TEMPLATE/add-project.yml).
 
 ## Pull request checklist
 
