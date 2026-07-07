@@ -12,5 +12,7 @@ All notable updates to this list are documented here.
 
 ### Maintenance
 
+- Fixed broken links for ModelCache, RedisVL, Martian, and Narev
+- Removed TokenForge (repository no longer available)
 - Added weekly link-check GitHub Action
 - Added issue and pull request templates for community contributions
